@@ -43,7 +43,12 @@ DefaultProvider-windowmanager=awesome
 DefaultProvider-notifications=notification-daemon
 ```
 
-Create ~/local/share/applications/awesome.desktop with the following contents
+Create ~/.local/share/applications/awesome.desktop
+```
+mkdir -p ~/.local/share/applications/
+touch ~/.local/share/applications/awesome.session
+```
+with the following contents
 
 ```
 [Desktop Entry] 
@@ -61,6 +66,10 @@ X-GNOME-Autostart-Notify=false
 ```
 
 #### system setup -- needed for when using a display manager using gnome app config files
+
+Install the notification-daemon package or change the awesome.session config above to use a different provider:
+
+```DefaultProvider-notifications=notification-daemon```
 
 Create /usr/share/xsessions/xsession.desktop with the following contents
 
