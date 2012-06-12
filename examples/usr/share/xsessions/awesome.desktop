@@ -1,0 +1,7 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Awesome
+Comment=Lightweight tiling window manager
+Exec=awesome
+Icon=awesome.png
+Type=XSession

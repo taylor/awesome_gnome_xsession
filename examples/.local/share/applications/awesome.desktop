@@ -1,0 +1,12 @@
+[Desktop Entry] 
+Encoding=UTF-8
+Name=awesome
+Type=Application
+Comment=Highly configurable framework window manager
+TryExec=awesome
+Exec=awesome
+NoDisplay=true
+X-GNOME-WMName=Awesome
+X-GNOME-Autostart-Phase=WindowManager
+X-GNOME-Provides=windowmanager
+X-GNOME-Autostart-Notify=false
