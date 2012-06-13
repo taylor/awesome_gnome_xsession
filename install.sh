@@ -72,4 +72,9 @@ else
   sudo yum install -y notification-daemon awesome
 fi
 
+if [ ! -f ~/.config/awesome/rc.lua ] ; then
+  mkdir -p ~/.config/awesome
+  cp simple_awesome_config/rc.lua ~/.config/awesome
+fi
+
 echo "Now restart your display manager with something like this -- sudo service lightdm restart"
