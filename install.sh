@@ -67,9 +67,9 @@ EOS
 
 r=`which yum`
 if [ ! "$?" = 0 ] ; then
-  sudo aptitude install -y notification-daemon
+  sudo aptitude install -y notification-daemon awesome awesome-extra
 else
-  sudo yum install -y notification-daemon
+  sudo yum install -y notification-daemon awesome
 fi
 
 echo "Now restart your display manager with something like this -- sudo service lightdm restart"
