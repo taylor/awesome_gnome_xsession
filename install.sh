@@ -38,7 +38,9 @@ DefaultProvider-windowmanager=awesome
 DefaultProvider-notifications=notification-daemon
 EOS
 
-cat <<"EOS"> ~/local/share/applications/awesome.desktop
+mkdir -p ~/.local/share/applications/awesome.desktop
+
+cat <<"EOS"> ~/.local/share/applications/awesome.desktop
 [Desktop Entry] 
 Encoding=UTF-8
 Name=awesome
@@ -55,7 +57,7 @@ EOS
 
 sudo mv -vf /usr/share/xsessions/xsession.desktop /usr/share/xsessions/xsession.desktop.before
 
-cat <<"EOS"> /usr/share/xsessions/xsession.desktop
+cat <<"EOS"|sudo tee -a /usr/share/xsessions/xsession.desktop
 [Desktop Entry]
 Name=Xsession
 Comment=This just runs ~/.xsession
@@ -64,9 +66,10 @@ EOS
 
 
 r=`which yum`
-
-if [ "$?" = 0 ] ; then
+if [ ! "$?" = 0 ] ; then
   sudo aptitude install -y notification-daemon
 else
   sudo yum install -y notification-daemon
 fi
+
+echo "Now restart your display manager with something like this -- sudo service lightdm restart"
