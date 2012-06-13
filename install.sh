@@ -75,6 +75,9 @@ fi
 if [ ! -f ~/.config/awesome/rc.lua ] ; then
   mkdir -p ~/.config/awesome
   cp simple_awesome_config/rc.lua ~/.config/awesome
+  git clone git://git.glacicle.org/awesome/eminent.git
+  cp eminent/eminent.lua ~/.config/awesome/
+  rm -rf eminent
 fi
 
 echo "Now restart your display manager with something like this -- sudo service lightdm restart"
