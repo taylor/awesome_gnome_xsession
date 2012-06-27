@@ -38,7 +38,7 @@ DefaultProvider-windowmanager=awesome
 DefaultProvider-notifications=notification-daemon
 EOS
 
-mkdir -p ~/.local/share/applications/awesome.desktop
+mkdir -p ~/.local/share/applications
 
 cat <<"EOS"> ~/.local/share/applications/awesome.desktop
 [Desktop Entry] 
