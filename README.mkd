@@ -1,8 +1,8 @@
 # Awesome + Gnome
 
-Using gnome magic the Awesome window manager to get a kick-ass WM with all the
-magic goodies that a gnome desktop tries to bring (handling multiple displays,
-resolution changes, notification stuff, etc).
+Using gnome magic with the Awesome window manager to get a kick-ass WM with all
+the magic goodies that a gnome desktop tries to bring (handling multiple
+displays, resolution changes, notification stuff, etc).
 
 *ck-launch-session* is used for helping make dbus stuff work.
 
@@ -44,6 +44,7 @@ DefaultProvider-notifications=notification-daemon
 ```
 
 Create ~/.local/share/applications/awesome.desktop
+
 ```
 mkdir -p ~/.local/share/applications/
 touch ~/.local/share/applications/awesome.session
@@ -65,13 +66,15 @@ X-GNOME-Provides=windowmanager
 X-GNOME-Autostart-Notify=false
 ```
 
-#### system setup -- needed for when using a display manager using gnome app config files
+#### System setup -- needed for when using a display manager using gnome app config files
 
-Install the notification-daemon package or change the awesome.session config above to use a different provider:
+Install the *notification-daemon* package or change the awesome.session config above to use a different provider:
 
-```DefaultProvider-notifications=notification-daemon```
+```
+DefaultProvider-notifications=notification-daemon
+```
 
-Create /usr/share/xsessions/xsession.desktop with the following contents
+Create /usr/share/xsessions/xsession.desktop with the following contents:
 
 ```
 [Desktop Entry]
